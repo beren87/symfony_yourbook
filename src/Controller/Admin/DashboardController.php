@@ -2,9 +2,13 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Adherent;
 use App\Entity\Auteur;
 use App\Entity\Editeur;
+use App\Entity\Emprunt;
+use App\Entity\Exemplaire;
 use App\Entity\Genre;
+use App\Entity\Livre;
 use App\Entity\Stock;
 use App\Entity\Usure;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -53,5 +57,9 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Auteur', 'fas fa-feather', Auteur::class);
         yield MenuItem::linkToCrud('Usure', 'fas fa-book-open', Usure::class);
         yield MenuItem::linkToCrud('Stock', 'fas fa-warehouse', Stock::class);
+        yield MenuItem::linkToCrud('Livre', 'fas fa-book', Livre::class);
+        yield MenuItem::linkToCrud('Exemplaire', 'fas fa-clone', Exemplaire::class);
+        yield MenuItem::linkToCrud('Adherent', 'fas fa-user-tie', Adherent::class);
+        yield MenuItem::linkToCrud('Emprunt', 'fas fa-exchange-alt', Emprunt::class);
     }
 }
