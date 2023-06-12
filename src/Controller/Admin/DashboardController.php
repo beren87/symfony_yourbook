@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Adherent;
+use App\Entity\Admin;
 use App\Entity\Auteur;
 use App\Entity\Editeur;
 use App\Entity\Emprunt;
@@ -61,5 +62,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Exemplaire', 'fas fa-clone', Exemplaire::class);
         yield MenuItem::linkToCrud('Adherent', 'fas fa-user-tie', Adherent::class);
         yield MenuItem::linkToCrud('Emprunt', 'fas fa-exchange-alt', Emprunt::class);
+        yield MenuItem::linkToCrud('Admin', 'fa-solid fa-user-plus', Admin::class);
     }
 }
